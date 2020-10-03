@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <form onsubmit="event.preventDefault()"  action="/users">
+                    <div class="form-group row">
+                        <div class="col-lg-6">
+                            <label for="marca">Marca</label>
+                            <input type="text" class="form-control" id="marca" placeholder="Ingresa la marca">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" class="form-control" id="modelo" placeholder="Ingresa el modelo">
+                            <label for="color">Color</label>
+                            <input type="text" class="form-control" id="color" placeholder="Ingresa el color">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="anho">Año</label>
+                             <input type="text" class="form-control" id="anho" placeholder="Ingresa el año">
+                             <label for="Precio">Precio</label>
+                             <input type="text" class="form-control" id="Precio" placeholder="Ingresa el precio">
+                        </div>
+                      
+                    </div>
+                    <div class="row justify-content-center">
+                        <button onclick="addAuto()" id="create-button"  type="submit" class="mr-2 btn btn-primary">Create</button>
+                        <button onclick="editAuto()" id="edit-button" disabled="true" type="submit" class="mr-2 btn btn-warning">Edit</button>
+                        <button onclick="removeAuto()" id="delete-button" disabled="true" class="mr-2 btn btn-danger">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container mt-5">
+        <div id="cards" class="row justify-content-around">
+        </div>
+    </div>
+    <script type="module" src="./users.js"></script>
+</body>
+</html>
