@@ -69,9 +69,9 @@ function addAuto() {
     const Color = document.getElementById('color').value;
     const anho = document.getElementById('anho').value;
     const Precio = document.getElementById('Precio').value;
-    
+    var finalId = autos[(autos.length)-1].id;
     const newAuto = {
-        id: autos.length + 1,
+        id: finalId + 1,
         Marca: Marca,
         Modelo: Modelo,
         Color: Color,
